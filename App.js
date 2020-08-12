@@ -11,16 +11,13 @@ export default class App extends Component{
       valor3:0,
       valor4:0};
   }
-
   
   Calcular=()=>{
-    // var V1 = parseFloat(this.state.valor1.replace(',', '.'));
-    // var V2 = parseFloat(this.state.valor2.replace(',', '.'));
-    // var V3 = parseFloat(this.state.valor3.replace(',', '.'));
-    var V1 = (this.state.valor1);
-    var V2 = (this.state.valor2);
-    var V3 = (this.state.valor3);
-    var V4 = (this.state.valor4);
+
+    var V1 = parseFloat(this.state.valor1.replace(',', '.'));
+    var V2 = parseFloat(this.state.valor2.replace(',', '.'));
+    var V3 = parseFloat(this.state.valor3.replace(',', '.'));
+    var V4 = parseFloat(this.state.valor4.replace(',', '.'));
     var L1 = V1 / V3
     var L2 = V2 / V4
     var R1 = (V1 * V2).toFixed(2);
@@ -37,7 +34,6 @@ export default class App extends Component{
       <Text style={style.title}>Calcule a área do seu projeto</Text>
       <TextInput 
         style={style.input}
-        //value={valor1}
         onChangeText={ valor1=>this.setState({valor1}) }
         placeholder="Altura Parede(m)"
         keyboardType="numeric"
@@ -45,7 +41,6 @@ export default class App extends Component{
 
       <TextInput 
         style={style.input}
-        //value={valor2}
         onChangeText={ valor2=>this.setState({valor2})}
         placeholder="Largura Parede(m)"
         keyboardType="numeric"
@@ -53,7 +48,6 @@ export default class App extends Component{
 
       <TextInput 
         style={style.input}
-        //value={valor3}
         onChangeText={ valor3=>this.setState({valor3}) }
         placeholder="Altura Placa(cm)"
         keyboardType="numeric"
@@ -61,7 +55,6 @@ export default class App extends Component{
 
       <TextInput 
         style={style.input}
-        //value={valor4}
         onChangeText={ valor4=>this.setState({valor4}) }
         placeholder="Largura Placa(cm)"
         keyboardType="numeric"
