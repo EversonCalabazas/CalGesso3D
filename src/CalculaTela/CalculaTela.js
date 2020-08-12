@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Alert} from 'react-native';
+import { ScrollView, Text, StyleSheet, TextInput, TouchableOpacity, Alert} from 'react-native';
 
 export default class CalculaTela extends Component{
   constructor(props){
@@ -30,7 +30,7 @@ export default class CalculaTela extends Component{
   }
   render(){
   return(
-    <View style={style.container}>
+    <ScrollView style={style.container}>
       <Text style={style.title}>Calcule a área do seu projeto</Text>
       <TextInput 
         style={style.input}
@@ -66,7 +66,7 @@ export default class CalculaTela extends Component{
       onPress={ () => {this.Calcular()} }>
         <Text style={style.buttonText}>Calcular</Text>
       </TouchableOpacity>
-    </View>
+    </ScrollView>
   );
   }
 }
