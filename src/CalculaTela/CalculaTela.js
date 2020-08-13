@@ -14,7 +14,7 @@ export default class CalculaTela extends Component{
   
   Calcular=()=>{
 
-    var V1 = parseFloat(this.state.valor1.replace(',', '.'));
+    var V1 = parseFloat(this.state.valor1.replace());
     var V2 = parseFloat(this.state.valor2.replace(',', '.'));
     var V3 = parseFloat(this.state.valor3.replace(',', '.'));
     var V4 = parseFloat(this.state.valor4.replace(',', '.'));
@@ -36,28 +36,28 @@ export default class CalculaTela extends Component{
         style={style.input}
         onChangeText={ valor1=>this.setState({valor1}) }
         placeholder="Altura Parede(m)"
-        keyboardType="numeric"
+        keyboardType="numbers-and-punctuation"
       />
 
       <TextInput 
         style={style.input}
         onChangeText={ valor2=>this.setState({valor2})}
         placeholder="Largura Parede(m)"
-        keyboardType="numeric"
+        keyboardType="numbers-and-punctuation"
       />
 
       <TextInput 
         style={style.input}
         onChangeText={ valor3=>this.setState({valor3}) }
         placeholder="Altura Placa(cm)"
-        keyboardType="numeric"
+        keyboardType="numbers-and-punctuation"
       />
 
       <TextInput 
         style={style.input}
         onChangeText={ valor4=>this.setState({valor4}) }
         placeholder="Largura Placa(cm)"
-        keyboardType="numeric"
+        keyboardType="numbers-and-punctuation"
       />  
       
 

@@ -1,8 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
+
 export default function Home({navigation}){
-  
+
   return(
     <View >
       <Text style={style.title}>Escolha uma das opções</Text>
@@ -15,7 +16,7 @@ export default function Home({navigation}){
 
       <TouchableOpacity 
       style={style.button}
-      onPress={ () => {this.TelaProjetos()} }>
+      onPress={ () => navigation.navigate('Home') }>
         <Text style={style.buttonText}>Projetos</Text>
       </TouchableOpacity>
       
@@ -39,7 +40,7 @@ const style = StyleSheet.create({
     backgroundColor:'#1476A1',
     padding:10,
     borderRadius:10,
-  },
+  },  
 
   buttonText:{
     color:'#fff',

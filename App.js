@@ -13,8 +13,24 @@ export default class App extends Component{
   return(
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="CalculaTela" component={CalculaTela}/>
+        <Stack.Screen 
+        name="Home"
+        component={Home}
+        options={{
+          headerStyle:{
+            backgroundColor: '#1476A1',
+          },
+          headerTintColor:'#fff'
+        }}/>
+        <Stack.Screen 
+        name="CalculaTela" 
+        component={CalculaTela}
+        options={{
+          headerStyle:{
+            backgroundColor: '#1476A1',
+          },
+          headerTintColor:'#fff'
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
